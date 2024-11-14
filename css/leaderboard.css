@@ -1,0 +1,125 @@
+body {
+    font-family: 'Creepster', cursive, 'Arial', sans-serif; /* Fonte assustadora */
+    text-align: center;
+    background-color: #1b1b1b; /* Fundo escuro */
+    color: #f8e71c; /* Texto amarelo alaranjado */
+    background-image: url('https://example.com/spiderweb-background.png'); /* Fundo com teias de aranha */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    margin: 20px auto; /* Centraliza o título */
+    color: #ff6f00; /* Laranja vibrante */
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px black; /* Sombra mais intensa */
+    position: relative;
+    display: inline-block; /* Garante que o título fique alinhado */
+}
+
+h1::before, h1::after {
+    content: ""; /* Jack-o'-lantern decorativa */
+    position: absolute;
+    font-size: 60px;
+}
+
+h1::before {
+    left: -70px; /* Ajuste para não sair da tela */
+    top: 0;
+}
+
+h1::after {
+    right: -70px; /* Ajuste para não sair da tela */
+    top: 0;
+}
+
+#leaderboardTable {
+    width: 90%; /* Mais largo */
+    margin: 40px auto;
+    border-collapse: collapse;
+    border-radius: 20px; /* Bordas mais arredondadas */
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(255, 111, 0, 0.9); /* Sombra laranja forte */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro */
+    border: 3px solid #ff6f00; /* Borda laranja vibrante */
+}
+
+#leaderboardTable th, #leaderboardTable td {
+    border: 1px solid #f8e71c;
+    padding: 16px 25px; /* Mais espaçamento */
+    text-align: center;
+    font-size: 18px;
+    color: #f8e71c;
+}
+
+#leaderboardTable th {
+    background-color: #ff6f00; /* Laranja para o cabeçalho */
+    font-size: 20px;
+    text-shadow: 2px 2px black;
+}
+
+#leaderboardTable td {
+    background-color: rgba(255, 111, 0, 0.2); /* Fundo translúcido */
+}
+
+#leaderboardTable tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo alternado */
+}
+
+#leaderboardTable tr:hover td {
+    background-color: rgba(255, 111, 0, 0.6); /* Destaque forte */
+}
+
+button {
+    padding: 15px 30px; /* Botões maiores */
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: #ff6f00;
+    color: black;
+    border: none;
+    border-radius: 12px; /* Bordas arredondadas */
+    cursor: pointer;
+   
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff8900; /* Laranja mais claro */
+    transform: scale(1.15); /* Cresce mais ao passar o mouse */
+}
+
+/* Decoração adicional */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://example.com/spiderweb-large.png'); /* Teia grande */
+    background-repeat: no-repeat;
+    background-position: top center; /* Ajuste centralizado */
+    pointer-events: none;
+    opacity: 0.4; /* Teia mais visível */
+}
+
+body::after {
+    content: "🎃 BOO! 🎃";
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 28px;
+    color: #ff6f00;
+    text-shadow: 3px 3px black;
+    animation: flicker 1.5s infinite; /* Efeito piscante */
+}
+
+/* Animação para o texto "BOO!" */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
